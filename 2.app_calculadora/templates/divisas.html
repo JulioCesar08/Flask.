@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Convertidor Divisas</h1>
+<p>Ingresa valor en Dólares ..</p>
+<form action="/divisas" method="POST">
+
+    <div class="row">
+        <div class="col-md-6">
+            <input type="number" class="form-control" name="n1" placeholder="Ingresa el valor a convertir" aria-label="Ingresa el valor a convertir" required>
+        </div>
+    </div>
+    <div class="row py-3">
+        <div class="col-md-12">
+            <button type="submit" class="btn btn-danger">Calcular</button>
+        </div>
+    </div>
+</form>
+
+<div class="row py-2">
+    <div class="col">
+        <h3>Valor en Pesos Colombianos: {{ total_pesosC }}</h3>
+        <h3>Valor en Euros: {{ total_euros }}</h3>
+        <h3>Valor en Libras Esterlinas: {{ total_librasE }}</h3>
+        <h3>Valor en Franco Suizo: {{ total_francoS }}</h3>
+        
+    </div>
+</div>
+
+{% endblock %}
