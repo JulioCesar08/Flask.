@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Calculadora Fechas</h1>
+<form action="/fechas" method="POST">
+
+    <div class="row">
+        <div class="col-md-6">
+            <input type="date" class="form-control" name="fecha1" placeholder="Ingresa la primera fecha" aria-label="Ingresa la primera fecha" required>
+        </div>
+        <div class="col-md-6">
+            <input type="date" class="form-control" name="fecha2" placeholder="Ingresa la segunda fecha" aria-label="Ingresa la segunda fecha" required>
+        </div>
+    </div>
+    <div class="row py-3">
+        <div class="col-md-12">
+            <button type="submit" class="btn btn-danger">Calcular</button>
+        </div>
+    </div>
+</form>
+
+<div class="row py-2">
+    <div class="col">
+        <h3>Meses: {{total_meses }}  </h3>
+        <h3>Semanas: {{total_semanas}}</h3>
+        <h3>Dias: {{total_dias}}</h3>
+    </div>
+</div>
+
+{% endblock %}
